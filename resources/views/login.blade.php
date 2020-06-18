@@ -24,7 +24,7 @@
   <form class="form-inline my-2 my-lg-0">
 
    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#basicExampleModal">
-  Launch demo modal
+  NEW COMPANY
 </button>
 
     </form>
