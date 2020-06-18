@@ -61,7 +61,7 @@ if(isset($_POST["registrar"])){
 
     if ($filas > 0){
         echo"<script>
-        alert('El usuario ya existe');
+        alert('ahha');
         window.location = 'index.php';
         </script>";
 
