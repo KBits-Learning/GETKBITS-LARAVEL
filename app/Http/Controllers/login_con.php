@@ -6,7 +6,7 @@ include("enviar_correo.php");
 
 session_start();
 if (isset( $_SESSION['id_usuario'])){
-    header("Location: admin.php");
+    header("Location: login.blade.php");
 }
 
 

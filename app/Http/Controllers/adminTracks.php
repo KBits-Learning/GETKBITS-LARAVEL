@@ -1,9 +1,9 @@
 <!--tracks--->
 <?php
-include("conexion.php");
+include("conexion.php");/*-------chanche--*/
 session_start();
 if (!isset( $_SESSION['id_usuario'])){
-    header("Location: index.php");
+    header("Location: main.blade.php");
 }
 
 $iduser = $_SESSION['id_usuario'];
