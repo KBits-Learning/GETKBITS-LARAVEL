@@ -14,4 +14,4 @@ $resultado = $conexion->query($sql);
 $row = $resultado->fetch_assoc();
 
 ?>
-<!--- CHANCHE CONEXIONS -->
+<!---CHANCHE CONEXIONS--->
