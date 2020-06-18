@@ -1,9 +1,3 @@
-<?php
-
-include("php/login_con.php");
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">
