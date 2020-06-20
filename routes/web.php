@@ -1,16 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use Illuminate \Support\Facades\Route;
 
-
-
-Route::get('/', function () {
-    return view('login');  
-
-/*---route to  home----*/ 
-Route ::view ('/main','main')->('main');    
+Route::get ('/',function (){
+    return view ('Welcome');
 });
 
- /*---route to tracks--*/
- route ::veiw ('/Tracks','Tracks')->('Tracks');
-});
+Route::get('login','LoginController@show');
