@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +29,22 @@
 
     </form>
 </nav>
+ 
+ <!--loop variable-->
 
+@foreach ($users as $user)
+    @if ($loop->first)
+        This is the first iteration.
+    @endif
 
+    @if ($loop->last)
+        This is the last iteration.
+    @endif
+
+    <p>This is user {{ $user->idusuario }}</p>
+@endforeach
+
+<!--en loop var-->
 
 <div class="form-signin">
 <!---sign in--->
