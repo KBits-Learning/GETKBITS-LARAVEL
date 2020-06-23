@@ -8,23 +8,32 @@ use Illuminate\support\Facades\DB;
 
 class LoginController extends Controller
 
-/**
-*show login 
-*muestra login
-*@return View
-*/
-public function show()
 {
-    $email ='';
-    $password='';
-    $password_encrypted = sha1($password);
-    
-	$users = DB::select('select * from usuarios where email = ? and password = ? and Estado = ?', [$email,$password_encrypted, 1]);
+public  function show (){
+     return view('login');
 
-    var_dump($users);
-    die();
-
-    return View('login',['users'0 => $users]);
 }
+
+//user credentials 
+public function checkCredentials (Request $request) {
+$user = [];
+$user['email'] = $request->get('email');
+$user['password'] = $request->get('password');
+$encrypted_password = sha1($user['password']);
+
+//user validation 
+$users = DB::select('select id from users where email = ? AND  password = ?', [$user['email'], $encrypted_password]);
+session (['user_id' => $users[0]->id]);
+
+//wrong user messege 
+return back()->with('status','Somthing is wrong', 'Check your email and password');
+
+
+//log in to home page 
+return redirect('homeController@index'); 
+
+
+
+
 
 ?>
