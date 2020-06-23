@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <?php
 
 namespace App\Http\Controllers;
@@ -33,5 +32,3 @@ use Illuminate\Http\Request;
         return view('home', ['view_data' => $view_data]);
  	 }
  }
-?>
->>>>>>> 723bd7462fb43556cad040e5cbf596ce728794f0
