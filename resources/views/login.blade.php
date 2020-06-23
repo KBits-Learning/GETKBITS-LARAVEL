@@ -32,10 +32,9 @@
              </div>
           {!!Form::close()!!}   
         </div>    
-            
- 
  <!-- wrong user messege-->    
         @if(session('status'))
         {{ session('status')}}
         @endif
-    <body/>    
+    </body>
+    </head>    

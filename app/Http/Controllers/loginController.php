@@ -1,13 +1,20 @@
 <?php
-namespace app\Http\controllers;
 
-use App\Http\controllers\controllers;
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
 use App\User;
-use Illuminate\support\Facades\DB;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
+ class LoginController extends Controller
+ {
+	public function show(){
 
-class LoginController extends Controller
+		return view('login');
+	}
 
+	public function checkCredentials(Request $request){
 {
 public  function show (){
      return view('login');
@@ -32,8 +39,6 @@ return back()->with('status','Somthing is wrong', 'Check your email and password
 //log in to home page 
 return redirect('homeController@index'); 
 
-
-
-
-
+	}
+ }
 ?>
