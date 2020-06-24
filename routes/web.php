@@ -18,4 +18,4 @@ Route::get('company_registration','CompanyRegistrationController@show');
 
 Route::post('company_registration', ['as'=>'companyRegistrationForm','uses'=>'CompanyRegistrationController@companyRegistrationForm']);
 
-Route::get('home','homeController@index');
+Route::get('home','homeController@index'); 
