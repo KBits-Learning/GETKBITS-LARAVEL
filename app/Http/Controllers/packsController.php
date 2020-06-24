@@ -44,6 +44,8 @@ use Illuminate\Http\Request;
  }
 ?>
 
+<!--refernce to add and save in database packs
+
 //Registrar Packs
 
 if(isset($_POST["registrar"])){
@@ -85,3 +87,4 @@ if(isset($_POST["registrar"])){
 
     }
 }
+--->

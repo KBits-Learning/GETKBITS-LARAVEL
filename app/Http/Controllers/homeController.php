@@ -33,5 +33,7 @@ use Illuminate\Http\Request;
 
  	 	// write validations, make sure the array size == 1
         return view('home', ['view_data' => $view_data]);
+
+        
  	 }
  }
