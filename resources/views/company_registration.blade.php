@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Login Kbits</title>
-    <link href="{{ asset('css/all.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/kbits/login.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body id="indexLogin">
