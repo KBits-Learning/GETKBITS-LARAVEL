@@ -27,16 +27,7 @@ use Illuminate\Http\Request;
 
         $view_data['pack_name'] = $pack[0]->name;
 
-       //register new pack 
-       @foreach ($pack as $packs => $value) {
-       	# code...
-       }
-
-
-
- 	 	// write validations, make sure the array size == 1
-        return view('tracks', ['view_data' => $view_data]);
- 	 	
+        
 
  	 	}
 
@@ -44,47 +35,5 @@ use Illuminate\Http\Request;
  }
 ?>
 
-<!--refernce to add and save in database packs
-
-//Registrar Packs
-
-if(isset($_POST["registrar"])){
 
 
-    $pack = mysqli_real_escape_string($conexion,$_POST['pack']);
-    $descripcion = mysqli_real_escape_string($conexion,$_POST['descripcion']);
-    $imagen = mysqli_real_escape_string($conexion,$_POST['imagen']);
-    $link = mysqli_real_escape_string($conexion,$_POST['link']);
-
-
-    $sqluser ="SELECT idpack FROM packs
-               WHERE link = '$link'";
-
-    $resultadoUser = $conexion->query($sqluser);
-
-    $filas = $resultadoUser->num_rows;
-
-    if ($filas > 0){
-        echo"<script>
-        alert('ya existe');
-        window.location = 'Packs.php';
-        </script>";
-
-    }else{
-        $sqlusuario = "INSERT INTO packs(pack,descripcion,imagen,link)
-        VALUES('$pack','$descripcion','$imagen','$link')";
-        $resultadoUsuario = $conexion->query($sqlusuario);
-
-        if ($resultadoUsuario > 0){
-            echo "<script>
-            alert('Completed');
-            window.location = 'Packs.php';
-            </script>";
-
-
-
-        }
-
-    }
-}
---->

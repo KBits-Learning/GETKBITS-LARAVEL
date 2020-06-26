@@ -14,7 +14,6 @@ use Illuminate\Http\Request;
 		return view('login');
 	}
 
-<<<<<<< HEAD
 	public function checkCredentials(Request $request){
 {
 public  function show (){
@@ -37,7 +36,7 @@ session (['user_id' => $users[0]->id]);
 //log in to home page 
 return redirect('homeController@index'); 
 
-=======
+
 	//user credentials 
 	public function checkCredentials (Request $request) {
 		
@@ -55,7 +54,7 @@ return redirect('homeController@index');
 
 		//log in to home page 
 		return redirect()->action('HomeController@index');
->>>>>>> b36a2a553d4c36382aeaafc015d4f008396a6b61
+
 	}
  }
 ?>
