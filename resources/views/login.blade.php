@@ -26,7 +26,7 @@
                         {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
                     </div>
                     <span class="text-danger">{{ $errors->first('email') }}</span>                   
-<<<<<<< HEAD
+
              </div>
              <!--password login seccion-->
              <div class="form-group {{ $errors->has('password') ? 'has error' : '' }}">
@@ -43,7 +43,7 @@
           {!!Form::close()!!}   
         </div>    
  <!-- wrong user messege-->    
-=======
+
                  </div>
                  <!--password login seccion-->
                  <div class="form-group {{ $errors->has('password') ? 'has error' : '' }}">
@@ -60,13 +60,10 @@
               {!!Form::close()!!}   
             </div>    
         <!-- wrong user messege-->    
->>>>>>> b36a2a553d4c36382aeaafc015d4f008396a6b61
+
         @if(session('status'))
             {{ session('status') }}
         @endif
     </body>
-    </head>    
-<<<<<<< HEAD
-=======
-</html>
->>>>>>> b36a2a553d4c36382aeaafc015d4f008396a6b61
+     
+

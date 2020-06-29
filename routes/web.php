@@ -39,3 +39,9 @@ Router::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'trac
 
 
 
+//search
+
+Route::get('members/search', 'searchbarController@index');
+
+//setting
+Route::('setting','settingController@show'); 

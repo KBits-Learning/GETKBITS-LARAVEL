@@ -55,53 +55,10 @@
         <a href="Setting"><i class="fas fa-cogs"></i><span>Settings</span></a>
 
     </div>
-    <!--sidebar end-->
-    <!--packs-->
-    <div class="content">
+   
+   <!--setting  conent-->
+   
 
-
-        <div>
-            <article>
-                <h1>Active Learning packs</h1>
-                <div class="card" style="width: 22rem;">
-                    <img src="2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">pack 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="Packs.php" class="btn btn-primary">Packs</a>
-                    </div>
-                    <div class="form-group">
-                 <button>add new pack</button>
-             </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
-
-    <!--tracks-->
-    <div class="content">
-
-
-        <div >
-            <article >
-                <h1>Active Learning Tracks</h1>
-                <div class="card" style="width: 22rem;">
-                    <img src="2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Course 1</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="packs.php" class="btn btn-primary">tracks</a>
-
-                    </div>
-                    <div class="form-group">
-                 <button>add new track</button>
-             </div>
-                </div>
-            </article>
-
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -109,4 +66,3 @@
 
 </body>
 </html>
-
