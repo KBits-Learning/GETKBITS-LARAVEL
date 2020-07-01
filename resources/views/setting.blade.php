@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <input type="checkbox" id="check">
+   
 
     <nav class="navbar fixed-bottom navbar-light bg-primary">
         <a class="navbar-brand">Kbits</a>
@@ -29,24 +29,53 @@
         </form>
     </nav>
 
-    <!--search-->
-    <form>
-        <input type="text" name="search" value="">
-        <button type="submit" name="button">SEARCH</button>
-    </form>
+    <!--ADDD NEW MEMBER-->
+     <div class="form-signin">  
+        <h1>Add New User</h1>
+            {!! Form::open(['route'=>'userRegistrationForm']) !!}
+                
+                
+                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="form-label-group">
+                    {!! Form::label('Email:') !!}
+                    {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
+                    </div>
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                </div>
+              
+                <div class="form-group">
+                    <button class="btn btn-success">ADD NEW MEMBER</button>
+                </div>
+            {!! Form::close() !!}
+        </div>
 
     <!--sidebar start-->
     <div class="sidebar">
-        <center>
+        
+           <h1>Company Details</h1>
+            <!--show the information of users -->
+           <div>
             <img src="1.jpg" class="profile_image" alt="">
             <!--show thw name loged in Mostrar -->
-            <h3>{{ $view_data['user']->first_name }} {{ $view_data['user']->last_name }}</h3>
+            <h5>{{ $view_data['user']->first_name }} {{ $view_data['user']->last_name }}</h5>
 
             @if ($view_data['user']->title)
                 <h5>{{ $view_data['user']->title }}</h5>
             @endif
             <h5>Company: {{ $view_data['company_name'] }}</h5>    
-        </center>
+          </div> 
+     <!--Billing Information-->
+     <div>
+         <h1>Billing Information</h1>
+
+     </div>   
+
+
+         
+
 
         <a href="home"><i class="fas fa-desktop"></i><span>Home</span></a>
         <a href="Tracks"><i class="fas fa-table"></i><span>Tracks</span></a>
@@ -56,7 +85,7 @@
 
     </div>
    
-   <!--setting  conent-->
+  
    
 
 

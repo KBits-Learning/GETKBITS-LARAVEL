@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <input type="checkbox" id="check">
+    
 
     <nav class="navbar fixed-bottom navbar-light bg-primary">
         <a class="navbar-brand">Kbits</a>

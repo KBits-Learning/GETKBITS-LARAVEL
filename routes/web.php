@@ -22,7 +22,7 @@ Route::get('company_registration','CompanyRegistrationController@show');
 Route::post('company_registration', ['as'=>'companyRegistrationForm','uses'=>'CompanyRegistrationController@companyRegistrationForm']);
 
 //packs
-Route::('packs','packsController@show');
+Route::get('packs','packsController@show');
 
 Route::get('pack_registration', 'packsRegistrationController@show');
 
@@ -31,7 +31,7 @@ Route::post('pack_registration', ['as' =>'packRegistrationForm','uses'=>'packsRe
 
 //track
 
-Route::('tracks','tracksController@show');
+Route::get('tracks','tracksController@show');
 
 Router::get('track_registration', 'tracksRegistrationController@show');
 
@@ -44,4 +44,4 @@ Router::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'trac
 Route::get('members/search', 'searchbarController@index');
 
 //setting
-Route::('setting','settingController@show'); 
+Route::get('setting','settingController@show'); 
