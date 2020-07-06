@@ -1,14 +1,17 @@
-<?php
+ <?php
 
 use Illuminate \Support\Facades\Route;
+use Illuminate\Routing\Router;
 
-Route::get ('/',function (){
-    return view ('login');
-});
+Route::get('/','loginController@show');
 //login
 Route::get('login','loginController@show');
 
 Route::post('login', ['as'=>'loginForm','uses'=>'loginController@checkCredentials']);
+
+//home controoller
+//Route::get('/','homeController@show');
+
 //registration user
 
 Route::get('user_registration','UserRegistrationController@show');
@@ -21,21 +24,24 @@ Route::get('company_registration','CompanyRegistrationController@show');
 
 Route::post('company_registration', ['as'=>'companyRegistrationForm','uses'=>'CompanyRegistrationController@companyRegistrationForm']);
 
+//home
+Route::get('home','homeController@index');
+
 //packs
 Route::get('packs','packsController@show');
 
-Route::get('pack_registration', 'packsRegistrationController@show');
+Route::get('packs_registration', 'packRegistrationController@show');
 
-Route::post('pack_registration', ['as' =>'packRegistrationForm','uses'=>'packsRegistrationController@packRegistrationForm']);
+Route::post('packs_registration', ['as' =>'packRegistrationForm','uses'=>'packRegistrationController@packRegistrationForm']);
 
 
 //track
 
 Route::get('tracks','tracksController@show');
 
-Router::get('track_registration', 'tracksRegistrationController@show');
+Route::get('track_registration', 'trackRegistrationController@show');
 
-Router::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'tracksRegistrationController@trackRegistrationForm']);
+Route::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'tracksRegistrationController@trackRegistrationForm']);
 
 
 
@@ -44,8 +50,7 @@ Router::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'trac
 Route::get('members/search', 'searchbarController@index');
 
 //setting
-<<<<<<< HEAD
-Route::get('setting','settingController@show'); 
-=======
-Route::('setting','settingController@show'); 
->>>>>>> 71fedcbc09307da15a267840b81938ec130453c5
+
+//Route::get('setting','settingController@show'); 
+
+?>

@@ -1,21 +1,19 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
- class CompanyRegistrationController extends Controller
+ class packRegistrationController extends Controller
  {
 	public function show(){
 
-		return view('tracks_registration');
+		return view('packs_registration');
 	}
 
 
-	public function companyRegistrationForm(Request $request){
+	public function packRegistrationForm(Request $request){
 		
 		$registration = [];
 		$registration['name'] = $request->get('name');
@@ -25,9 +23,10 @@ use Illuminate\Http\Request;
 
 		// validate data
 
-		DB::insert('insert into tracks (name, description,image,author_id ) values (?, ?, ?, ?)', [$registration['name'], $registration['description'], $registration['image'] ,$registration['author_id']]);
+		DB::insert('insert into packs (name, description,image,author_id ) values (?, ?, ?, ?)', [$registration['name'], $registration['description'], $registration['image'] ,$registration['author_id']]);
 
 		return back()->with('success', 'new pack created');
+
 	}
  }
 ?>

@@ -32,7 +32,7 @@
              <div class="form-group {{ $errors->has('password') ? 'has error' : '' }}">
                   <div  class="form-label-group"> 
                     {!! Form::label('password:') !!}   
-                    {!! Form::Text('pasword', old('pass'), ['class'=>'form-control', 'placeholder'=>'Enter Password']) !!}
+                    {!! Form::Text('password', old('password'), ['class'=>'form-control', 'placeholder'=>'Enter Password']) !!}
                   </div>
                   <span class="text-danger">{{ $errors->first('password') }}</span>  
              </div>
@@ -44,22 +44,8 @@
         </div>    
  <!-- wrong user messege-->    
 
-                 </div>
-                 <!--password login seccion-->
-                 <div class="form-group {{ $errors->has('password') ? 'has error' : '' }}">
-                      <div  class="form-label-group"> 
-                        {!! Form::label('Password:') !!}   
-                        {!! Form::text('password', old('password'), ['class'=>'form-control', 'placeholder'=>'Enter Password']) !!}
-                      </div>
-                      <span class="text-danger">{{ $errors->first('password') }}</span>  
-                 </div>
-                 <!--login button-->
-                 <div class="form-group">
-                     <button>Login</button>
-                 </div>
-              {!!Form::close()!!}   
-            </div>    
-        <!-- wrong user messege-->    
+                 
+                 
 
         @if(session('status'))
             {{ session('status') }}

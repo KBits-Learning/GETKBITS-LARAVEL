@@ -1,4 +1,3 @@
-
 <?php
 namespace App;
 use Spatie\Searchable\Searchable;
@@ -35,3 +34,4 @@ methods: {
     .catch(error => {});
   }
 }
+?>
