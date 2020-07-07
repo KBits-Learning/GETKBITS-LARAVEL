@@ -1,39 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
-#indexLogin > div{
+/* #indexLogin > div{
     display: inline-block;
+} */
+
+/*registration-login panel*/
+
+.login-container {
+  padding: 0;
 }
 
 img.main-logo {
-    width: 7rem;
-    position: relative;
-    margin-top: 17%;
-    left: 10%;
-}
-
-.login-img {
-    background: #f2f2f2;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-}
-
-.login-reg {
-    position: relative;
-    top:32%;
+  width: 7rem;
+  position: relative;
+  margin: 13%;
 }
 
 .login-content {
-    display: flex;
-    align-items: center;
-    height: 84vh;
-    width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-/*form.login-content {
-    margin: 0 auto;
-}*/
+.form-group-kbits {
+    margin-bottom: 7%;
+    position: relative;
+    width: 30vw;
+    align-items: center;
+}
+
+.form-group-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+
+}
+
+input {
+  border: none;
+  font-family:  'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+input.form-control-kbits::placeholder {
+  font-family:  'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+/*image panel*/
+
+.login-reg {
+  position: relative;
+  top: 45%;
+  left: 10%;
+  width: 45vw;
+}
+
+.login-legend {
+  padding-top: 10%;
+  padding-left: 12%;
+  padding-bottom: 15%;
+}
+
+.login-img {
+  background: #f2f2f2;
+  height: 100vh;
+  width: 100%;
+} 
+
+img.login-reg-vertical {
+  height: 41vh;
+  left: 25%;
+  position: relative;
+}
+
+
+/*end image panel*/
 
 input.form-control-kbits {
     border-top: none;
@@ -43,20 +88,6 @@ input.form-control-kbits {
     border-radius: 0;
     width: 80%;
     display: block;
-}
-
-.form-group-kbits {
-    margin-bottom: 12%;
-    position: relative;
-    margin-left: 18%;
-    width: 32vw;
-}
-
-.form-group-login-btn {
-    width:  40vw;
-    position: relative;
-    left: 9rem;
-    top: 4.5rem;
 }
 
 .fancy-btn {
@@ -82,3 +113,125 @@ label {
     font-weight: 400;
 }
 
+h1.login-action {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+
+}
+
+h2.login-action-sub {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  margin-left: 4rem;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 375px) {
+
+img.main-logo {
+  width: 10rem;
+  display: block;
+  margin: 30%;
+}
+
+.login-content {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+}
+
+.form-group-kbits {
+  margin-bottom: 10%;
+  position: relative;
+  /*margin-left: 14%;*/
+  width: 86vw;
+  align-items: center;
+}
+
+.login-img {
+  display: none;
+}
+
+.form-group-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 5%;*/
+
+}
+
+.fancy-btn {
+  background-color: #0abab5; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.4rem 3rem;
+  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;*
+  align-self: center;
+}
+
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (orientation : portrait) {
+
+img.main-logo {
+  width: 10rem;
+  display: block;
+  margin: 30%;
+}
+
+.login-content {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20%;
+}
+
+.form-group-kbits {
+  margin-bottom: 10%;
+  position: relative;
+  /*margin-left: 14%;*/
+  width: 86vw;
+  align-items: center;
+}
+
+.login-img {
+  display: none;
+}
+
+.form-group-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*height: 5%;*/
+
+}
+
+.fancy-btn {
+  background-color: #0abab5; 
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.4rem 3rem;
+  font-size: 1.5em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;*
+  align-self: center;
+}
+
+}

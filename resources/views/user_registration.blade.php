@@ -3,67 +3,68 @@
 <head>
     <meta charset="utf-8" />
     <title>Login Kbits</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/kbits/login.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body id="indexLogin">
-<!-- Navigation Bar TBD -->
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="/">Kbits</a>
-    </nav>
-    <div class="login-container">
-        <div class="login-img">
-            <img class src="images/kbits-login.svg">
-        </div>
-        @if(session('success'))
-           <div class="alert alert-success">
-             {{ session('success') }}
-           </div>
-        @endif
-        <div class="form-signin">  
-            {!! Form::open(['route'=>'userRegistrationForm']) !!}
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
+    <div class="row">
+        <div class="login-container col-md-5 col-12">
+            <img class="main-logo" src="images/logo-kbits-rounded.svg">
+            @if(session('success'))
+               <div class="alert alert-success">
+                 {{ session('success') }}
+               </div>
+            @endif
+            <div class="login-content">  
+                {!! Form::open(['route'=>'userRegistrationForm']) !!}
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('First Name') !!}
+                        {!! Form::text('first_name', old('first_name'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('first_name') }}</span>
                     </div>
-                    <div class="form-label-group">
-                    {!! Form::label('First Name:') !!}
-                    {!! Form::text('first_name', old('first_name'), ['class'=>'form-control', 'placeholder'=>'Enter First Name']) !!}
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Last Name') !!}
+                        {!! Form::text('last_name', old('last_name'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('last_name') }}</span>
                     </div>
-                    <span class="text-danger">{{ $errors->first('first_name') }}</span>
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Email') !!}
+                        {!! Form::text('email', old('email'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                    </div>
+                    <div class="form-group-kbits {{ $errors->has('email') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Password') !!}
+                        {!! Form::text('password', old('pass'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                    </div>
+                {!! Form::close() !!}
+            </div>
+            <div class="form-group-login-btn">
+                <button class="fancy-btn">Create Account</button>
+            </div>
+        </div> 
+        <div class="login-img col">
+                <div class="login-legend">
+                    <h1 class="login-action">
+                        Almost there!
+                    </h1>
+                    <h2 class="login-action-sub">
+                        Let's now create your account
+                    </h2>
                 </div>
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-label-group">
-                    {!! Form::label('Last Name:') !!}
-                    {!! Form::text('last_name', old('last_name'), ['class'=>'form-control', 'placeholder'=>'Enter Last Name']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('last_name') }}</span>
-                </div>
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-label-group">
-                    {!! Form::label('Email:') !!}
-                    {!! Form::text('email', old('email'), ['class'=>'form-control', 'placeholder'=>'Enter Email']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                </div>
-                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                    <div class="form-label-group">
-                    {!! Form::label('Password:') !!}
-                    {!! Form::text('password', old('pass'), ['class'=>'form-control', 'placeholder'=>'Enter Password']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('password') }}</span>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-success">Login</button>
-                </div>
-            {!! Form::close() !!}
-        </div>
+                <img class="login-reg-vertical" src="images/user-registration.svg">
+            </div>
+        </div>   
     </div>    
 </body>
 </html>

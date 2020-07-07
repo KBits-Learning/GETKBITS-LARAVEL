@@ -3,60 +3,59 @@
 <head>
     <meta charset="utf-8" />
     <title>Login Kbits</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/kbits/login.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body id="indexLogin">
-<!-- Navigation Bar TBD -->
-    <nav class="navbar fixed-top navbar-light bg-light">
-      <a class="navbar-brand" href="/">Kbits</a>
-    </nav>
-    <div class="login-container">
-        <div class="login-img">
-            <img class src="images/kbits-login.svg">
+    <div class="row">
+        <div class="login-container col-md-5 col-12">
+            <img class="main-logo" src="images/logo-kbits-rounded.svg">
+            @if(session('success'))
+               <div class="alert alert-success">
+                 {{ session('success') }}
+               </div>
+            @endif
+            <div class="login-content">  
+                {!! Form::open(['route'=>'companyRegistrationForm']) !!}
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Company Name:') !!}
+                        {!! Form::text('name', old('name'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                    </div>
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Company Size:') !!}
+                        {!! Form::text('size', old('size'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('size') }}</span>
+                    </div>
+                    <div class="form-group-kbits {{ $errors->has('user') ? 'has-error' : '' }}">
+                        <div class="form-label-group-kbits">
+                        {!! Form::label('Industry:') !!}
+                        {!! Form::text('industry', old('industry'), ['class'=>'form-control-kbits', 'placeholder'=>'']) !!}
+                        </div>
+                        <span class="text-danger">{{ $errors->first('industry') }}</span>
+                    </div>
+                {!! Form::close() !!}
+            </div>
+            <div class="form-group-login-btn">
+                <button class="fancy-btn">Create Team</button>
+            </div>
         </div>
-        @if(session('success'))
-           <div class="alert alert-success">
-             {{ session('success') }}
-           </div>
-        @endif
-        <div class="form-signin">  
-            {!! Form::open(['route'=>'companyRegistrationForm']) !!}
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-label-group">
-                    {!! Form::label('Company Name:') !!}
-                    {!! Form::text('name', old('name'), ['class'=>'form-control', 'placeholder'=>'Enter Company Name']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('name') }}</span>
-                </div>
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-label-group">
-                    {!! Form::label('Company Size:') !!}
-                    {!! Form::text('size', old('size'), ['class'=>'form-control', 'placeholder'=>'Enter Company Size']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('size') }}</span>
-                </div>
-                <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="form-label-group">
-                    {!! Form::label('Industry:') !!}
-                    {!! Form::text('industry', old('industry'), ['class'=>'form-control', 'placeholder'=>'Enter Industry']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('industry') }}</span>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-success">Create Team</button>
-                </div>
-            {!! Form::close() !!}
+        <div class="login-img col">
+            <div class="login-legend">
+                <h1 class="login-action">
+                    First things first
+                </h1>
+                <h2 class="login-action-sub">
+                    Let's set your team up.
+                </h2>
+            </div>
+            <img class="login-reg" src="images/company-registration-image.svg">
         </div>
     </div>    
 </body>

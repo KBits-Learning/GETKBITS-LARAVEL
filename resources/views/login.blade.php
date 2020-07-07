@@ -3,14 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <title>Login Kbits</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/kbits/login.css') }}" rel="stylesheet">
         <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <head/>    
     <body id="indexLogin">
-        <!-- <nav class="navbar fixed-top navbar-light bg-light">
-          <a class="navbar-brand" href="/">Kbits</a>
-        </nav> -->
         <div class="login-container col-md-5">   
             <img class="main-logo" src="images/logo-kbits-rounded.svg">
             <div class="login-content">

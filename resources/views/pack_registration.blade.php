@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Login Kbits</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="{{ asset('css/all.css') }}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
