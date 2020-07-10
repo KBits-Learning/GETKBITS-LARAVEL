@@ -35,6 +35,8 @@
         <button type="submit" name="button">SEARCH</button>
     </form>
 
+
+
     <!--sidebar start-->
     <div class="sidebar">
         <center>
@@ -47,10 +49,11 @@
             @endif
          
         </center>
+       
 
         <a href="home"><i class="fas fa-desktop"></i><span>Home</span></a>
-        <a href="Tracks"><i class="fas fa-table"></i><span>Tracks</span></a>
-        <a href="Packs"><i class="fas fa-bezier-curve"></i><span>Packs</span></a>
+        <a href="tracks_home"><i class="fas fa-table"></i><span>Tracks</span></a>
+        <a href="packs_home"><i class="fas fa-bezier-curve"></i><span>Packs</span></a>
         <a href="#"><i class="fas fa-info-circle"></i><span>support</span></a>
         <a href="Setting"><i class="fas fa-cogs"></i><span>Settings</span></a>
 
@@ -68,10 +71,10 @@
                     <div class="card-body">
                         <h5 class="card-title">pack 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="Packs.php" class="btn btn-primary">Packs</a>
-                    </div>
+                        <a href="packs_home" class="btn btn-primary">Packs</a>
+                    </div> 
                     <div class="form-group">
-                 <button>add new pack</button>
+                 <a href="pack_registration" class ="btn btn-primary">add new pack</a>
              </div>
                 </div>
             </article>
@@ -91,11 +94,11 @@
                     <div class="card-body">
                         <h5 class="card-title">Course 1</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="packs.php" class="btn btn-primary">tracks</a>
+                        <a href="tracks_home" class="btn btn-primary">tracks</a>
 
                     </div>
                     <div class="form-group">
-                 <button>add new track</button>
+                 <a href="tracks_registration" class ="btn btn-primary">add new track</a>
              </div>
                 </div>
             </article>

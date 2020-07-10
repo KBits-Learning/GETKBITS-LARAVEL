@@ -39,6 +39,7 @@
              <!--login button-->
              <div class="form-group">
                  <button>LOGIN</button>
+                  <a href="user_registration" class ="btn btn-primary">NEW USER?</a>
              </div>
           {!!Form::close()!!}   
         </div>    
@@ -47,9 +48,7 @@
                  
                  
 
-        @if(session('status'))
-            {{ session('status') }}
-        @endif
+        
     </body>
      
 

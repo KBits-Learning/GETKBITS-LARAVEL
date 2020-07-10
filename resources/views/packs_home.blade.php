@@ -36,28 +36,25 @@
 
     <!--sidebar start-->
     <div class="sidebar">
-        <center>
-            <img src="1.jpg" class="profile_image" alt="">
-            <!--show thw name loged in Mostrar -->
-            <h3>{{ $view_data['user']->first_name }} {{ $view_data['user']->last_name }}</h3>
-
-            @if ($view_data['user']->title)
-                <h5>{{ $view_data['user']->title }}</h5>
-            @endif
-         
-        </center>
-
+       
         <a href="home"><i class="fas fa-desktop"></i><span>Home</span></a>
-        <a href="Tracks"><i class="fas fa-table"></i><span>Tracks</span></a>
-        <a href="Packs"><i class="fas fa-bezier-curve"></i><span>Packs</span></a>
+        <a href="tracks_home"><i class="fas fa-table"></i><span>Tracks</span></a>
+        <a href="packs_home"><i class="fas fa-bezier-curve"></i><span>Packs</span></a>
         <a href="#"><i class="fas fa-info-circle"></i><span>support</span></a>
-        <a href="Setting"><i class="fas fa-cogs"></i><span>Settings</span></a>
+        <a href="Setting"><i class="fas fa-cogs"></i><span>Settings</span></a>  
 
     </div>
-    <!--sidebar end-->
+    <!--
+         <center>
+        
+          <h3>{{ $view_data['pack']->name }} {{ $view_data['pack']->description }} {{ $view_data['pack']->image }}</h3>
 
-
-
+            @if ($view_data['pack']->author_id)
+                <h5>{{ $view_data['pack']->author_id }}</h5>
+            @endif 
+        </center>
+         
+-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

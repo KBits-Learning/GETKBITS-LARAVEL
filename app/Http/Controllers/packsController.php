@@ -17,15 +17,15 @@ use Illuminate\Http\Request;
 
  	 	$view_data['pack'] = $packs[0];
 
- 	 	track = DB::table('packs')
-           ->join('pack_name', 'pack.id', '=', 'pack_name.pack_id')
-          here('pack_name.pack_id', '=', $pack_id)
-           ->select('pack.name')
-           ->get();
+ 	 	$pack = DB::table('packs')
+        ->join('pack_name', 'pack.id', '=', 'pack_name.pack_id')
+        ->here('pack_name.pack_id', '=', $pack_id)
+        ->select('pack.name')
+        ->get();
 
         $view_data['pack_name'] = $pack[0]->name;
 
-		return view('packs', ['view_data' => $view_data]);
+		return view('packs_home', ['view_data' => $view_data]);
         
 
  	 	}

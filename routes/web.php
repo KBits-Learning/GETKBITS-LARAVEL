@@ -1,5 +1,4 @@
  <?php
-
 use Illuminate \Support\Facades\Route;
 use Illuminate\Routing\Router;
 
@@ -8,10 +7,6 @@ Route::get('/','loginController@show');
 Route::get('login','loginController@show');
 
 Route::post('login', ['as'=>'loginForm','uses'=>'loginController@checkCredentials']);
-
-//home controoller
-//Route::get('/','homeController@show');
-
 //registration user
 
 Route::get('user_registration','UserRegistrationController@show');
@@ -28,22 +23,20 @@ Route::post('company_registration', ['as'=>'companyRegistrationForm','uses'=>'Co
 Route::get('home','homeController@index');
 
 //packs
-Route::get('packs','packsController@show');
+Route::get('packs_home','packsController@show');
 
-Route::get('packs_registration', 'packRegistrationController@show');
+Route::get('pack_registration', 'packRegistrationController@show');
 
-Route::post('packs_registration', ['as' =>'packRegistrationForm','uses'=>'packRegistrationController@packRegistrationForm']);
-
+Route::post('pack_registration', ['as' =>'packRegistrationForm','uses'=>'packRegistrationController@packRegistrationForm']);
 
 //track
 
-Route::get('tracks','tracksController@show');
+Route::get('tracks_home','tracksController@show');
 
-Route::get('track_registration', 'trackRegistrationController@show');
+Route::get('tracks_registration', 'tracksRegistrationController@show');
 
-Route::post('track_registration', ['as'=>'trackRegistrationForm', 'uses'=>'tracksRegistrationController@trackRegistrationForm']);
-
-
+Route::post('tracks_registration', ['as' =>'trackRegistrationForm','tracksRegistrationController@trackRegistrationForm']);
+//Route::post()
 
 //search
 

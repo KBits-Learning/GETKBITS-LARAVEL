@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
  	 	$track_id = session('track_id');
 
- 	 	$tracks = DB::select('select name, description, image, author_id from tracks where id = ?', [$track_id]);
+ 	 	$tracks = DB::select('select name, description, image, author_id, url from tracks where id = ?', [$track_id]);
 
  	 	$view_data['track'] = $tracks[0];
 
