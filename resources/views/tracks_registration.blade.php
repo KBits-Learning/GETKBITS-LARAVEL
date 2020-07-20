@@ -19,7 +19,7 @@
            </div>
         @endif
         <div class="form-signin">  
-            {!! Form::open(['route'=>'packRegistrationForm']) !!}
+            {!! Form::open(['route'=>'trackRegistrationForm']) !!}
             <!--track name-->
                 <div class="form-group {{ $errors->has('user') ? 'has-error' : '' }}">
                     <div class="i">
@@ -54,14 +54,7 @@
                     <span class="text-danger">{{ $errors->first('image') }}</span>
                 </div>
             
-            <!--url-->
-                 <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                    <div class="form-label-group">
-                    {!! Form::label('Add url:') !!}
-                    {!! Form::text('url', old('url'), ['class'=>'form-control', 'placeholder'=>'Enter url']) !!}
-                    </div>
-                    <span class="text-danger">{{ $errors->first('author_id') }}</span>
-                </div>
+        
             <!--add button-->    
                 <div class="form-group">
                     <button class="btn btn-success">ADD TRACK</button>

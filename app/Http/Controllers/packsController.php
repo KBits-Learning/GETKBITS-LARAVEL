@@ -8,25 +8,19 @@ use Illuminate\Http\Request;
  class packsController extends Controller
  {
  	 public function show(){
+
  	 	
- 	 	$view_data = [];
+ 	 	
+$view_data = [];
 
- 	 	$pack_id = session('pack_id');
+ 	 	$packs_id = session('packs_id');
 
- 	 	$packs = DB::select('select name, description, image, author_id from packs where id = ?', [$pack_id]);
+ 	 	$packs = DB::select('select name, description, image from tracks where id = ?', [$packs_id]);
 
- 	 	$view_data['pack'] = $packs[0];
+ 	 	$view_data['packs'] = $users[0];
 
- 	 	$pack = DB::table('packs')
-        ->join('pack_name', 'pack.id', '=', 'pack_name.pack_id')
-        ->here('pack_name.pack_id', '=', $pack_id)
-        ->select('pack.name')
-        ->get();
-
-        $view_data['pack_name'] = $pack[0]->name;
-
-		return view('packs_home', ['view_data' => $view_data]);
-        
+ 	 	return view('packs_home', ['view_data' => $view_data]);
+ 	 	
 
  	 	}
 

@@ -12,16 +12,22 @@ use Illuminate\Http\Request;
 		return view('tracks_registration');
 	}
 	public function trackRegistrationForm(Request $request){
+
+
 		
 		$registration= [];
 		$registration['name'] = $request->get('name');
 		$registration['description'] = $request->get('description');
 		$registration['image'] = $request->get('image');
-		$registration['url'] = $request->get('url');
+		
+
+		 //var_dump($registration);
+   
+         //die();
 
 		// validate data
 
-		DB::insert('insert into tracks (name,description,image,url) values (?, ?, ?, ?)', [$registration['name'], $registration['description'], $registration['image'] ,$registration['url']]);
+		DB::insert('insert into tracks (name,description,image,url) values (?, ?, ?, ?)', [$registration['name'], $registration['description'], $registration['image']]);
 
 		return back()->with('success', 'new track created');
 	}

@@ -25,6 +25,8 @@ Route::get('home','homeController@index');
 //packs
 Route::get('packs_home','packsController@show');
 
+Route::get('packs_page','packsPageController@show');
+
 Route::get('pack_registration', 'packRegistrationController@show');
 
 Route::post('pack_registration', ['as' =>'packRegistrationForm','uses'=>'packRegistrationController@packRegistrationForm']);
@@ -33,9 +35,11 @@ Route::post('pack_registration', ['as' =>'packRegistrationForm','uses'=>'packReg
 
 Route::get('tracks_home','tracksController@show');
 
+Route::get('track_page','tracksPageController@show');
+
 Route::get('tracks_registration', 'tracksRegistrationController@show');
 
-Route::post('tracks_registration', ['as' =>'trackRegistrationForm','tracksRegistrationController@trackRegistrationForm']);
+Route::post('tracks_registration', ['as' =>'trackRegistrationForm','uses' => 'tracksRegistrationController@trackRegistrationForm']);
 //Route::post()
 
 //search

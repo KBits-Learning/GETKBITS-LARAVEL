@@ -11,24 +11,13 @@ use Illuminate\Http\Request;
  	 	
  	 	$view_data = [];
 
- 	 	$track_id = session('track_id');
+ 	 	$tracks_id = session('tracks_id');
 
- 	 	$tracks = DB::select('select name, description, image, author_id, url from tracks where id = ?', [$track_id]);
+ 	 	$tracks = DB::select('select name, description, image from tracks where id = ?', [$tracks_id]);
 
- 	 	$view_data['track'] = $tracks[0];
+ 	 	$view_data['tracks'] = $users[0];
 
- 	 	$track = DB::table('tracks')
-            ->join('track_name', 'track.id', '=', 'track_name.track_id')
-            ->where('track_name.track_id', '=', $track_id)
-            ->select('track.name')
-            ->get();
-
-        $view_data['track_name'] = $track[0]->name;
-
- 	 	// write validations, make sure the array size == 1
-        return view('tracks', ['view_data' => $view_data]);
- 	 	
-
+ 	 	return view('tracks_home', ['view_data' => $view_data]);
  	 	}
 
  	 }

@@ -18,14 +18,19 @@ use Illuminate\Http\Request;
  	 	$view_data['user'] = $users[0];
 
  	 	$company = DB::table('companies')
-          ->join('company_users', 'companies.id', '=', 'company_users.company_id')
+            ->join('company_users', 'companies.id', '=', 'company_users.company_id')
             ->where('company_users.user_id', '=', $user_id)
-           ->select('companies.name')
-           ->get();
+            ->select('companies.name')
+            ->get();
 
         
 
-    	//$view_data['company_name'] = $company[0]->name;
+    	//var_dump($user);
+        //var_dump($users);
+        //die();
+        $view_data['company_name'] = $company[0]->name;
+
+    	
 
  	 	// write validations, make sure the array size == 1
         return view('home', ['view_data' => $view_data]);
